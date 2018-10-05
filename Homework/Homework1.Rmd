@@ -1,0 +1,23 @@
+---
+title: "Homework One"
+author: "Lin-Wayne"
+date: "2018å¹<b4>10<e6><9c><88>2<e6>—¥"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+³o¬O§@·~¤@ªºÃD¥Ø»P«ü¥O¡C
+
+##§@·~¤@
+
+```{r}
+1+1
+2+2
+32*32
+```
+
