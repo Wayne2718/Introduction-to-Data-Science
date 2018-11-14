@@ -1,0 +1,45 @@
+---
+title: "HOMEWORK FIVE"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+練習題
+
+1. 我們建立了一個 week 向量，裡面有一個星期中的七天名稱，請您使用 for 迴圈───輸出每一天
+
+2. 同樣的一個 week 向量，請您使用 while 迴圈───輸出每一天
+
+3. 同樣的一個 week 向量，請您在使用迴圈───輸出每一天的時候略過週一到週五，只輸出我們最愛的週末兩天即可
+
+
+```{r}
+week <- c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+
+for (week in week){
+ print(week)
+ }
+
+week <- c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+i <- 1
+while (i < 8){
+ print(week[i])
+ i <- i + 1
+ }
+
+for (week in week){
+ if (week == "weekdays"){
+ next
+ } else {
+ print(week)
+ }
+ }
+
+
+
+
+
+```
+
