@@ -1,0 +1,50 @@
+---
+title: "HOMEWORK TWO"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+隨堂練習題*
+
+1. 將您的身高（公分）指派給 my_height；體重（公斤）指派給
+
+
+1. 分別將 myheight 與 myweight 輸出在命令列
+
+
+1. 利用 myheight 與 myweight 計算您的身體質量指數（Body Mass 
+Index，BMI），BMI 計算公式為：
+
+1. 將您的姓名指派給 my_name 並且輸出在命令列
+
+
+
+```{r}
+
+my_weight
+my_height <-182
+my_weight <-60
+
+my_height
+my_weight
+
+bmi <- (62) / (182/ 100)^2
+bmi
+
+my_name <- "Wayne"
+my_name
+
+
+
+
+
+
+
+
+
+```
+
+
+
