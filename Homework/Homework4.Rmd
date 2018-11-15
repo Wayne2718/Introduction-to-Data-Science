@@ -1,0 +1,105 @@
+---
+title: 'HOMEWORK FOUR'
+author: "wayne"
+date: "2018年10月23日"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+隨堂練習題(1)
+
+1. 我們有一個文字向量 weekdays 是一週的星期一到星期五，請您將最喜歡的週五（Happy Friday）從這
+個向量中用索引值選出來並且指派給 favorite_day。
+
+1. 同樣的文字向量，請您利用判斷運算子將最藍的週一（Blue Monday）從這個向量中剔除後將剩餘的日子指派給 without_monday。
+
+1. 我們有一個文字向量 speedchar 描述速度的快慢，請您使用 factor() 函數轉換成因素向量 speedfactor，
+並且讓快慢有排序（慢 < 快）
+
+隨堂練習題(2)
+
+1. 我們有一個矩陣叫做 my_mat，它是一個 3x3 的矩陣，裡面有 1 到 9 這些數字，請您利用 [m, n] 把 8 選出來。
+
+1. 同樣的一個矩陣，請您利用判斷運算子來對矩陣進行篩選，選出奇數（1、3、5、7、9）。
+
+1. 
+我們繼續使用great_nba_teams這個資料框，請您分別利用$變數名稱與 [, "變數名稱"] 將is_champion變數挑出來。
+
+隨堂練習題(3)
+
+ 1. 我們把 1 到 1000 儲存在 10 個 10x10 的矩陣，並且收納在一個陣列 my_arr 之中，請你練習用索引
+值將 315 這個數字選出來
+
+1. 我們已經建立好幾個物件，請您幫我們收納進一個清單中叫做 worstnbateams，並利用 [[索引值]] 從清
+單中選出 wins 這個向量
+
+1. 同樣的幾個物件，請您建立清單 worstnbateams 的時候為每個物件命名，並且利用 $物件名稱 從清單中
+選出 teams 這個向量
+
+
+
+
+
+
+```{r}
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+favorite_day <- weekdays[5]
+favorite_day
+
+weekdays <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+not_blue_monday <- weekdays != "Monday"
+without_monday <- weekdays[not_blue_monday]
+without_monday
+
+speed_char <- c("slow", "fast")
+speed_factor <- factor(speed_char, ordered = TRUE, levels = c("slow", "fast"))
+speed_factor
+
+my_mat <- matrix(1:9, nrow = 3)
+my_mat[2, 3]
+
+my_mat <- matrix(1:9, nrow = 3)
+filter <- my_mat %% 2 == TRUE
+my_mat[filter]
+
+team_name <- c("Chicago Bulls", "Golden State Warriors")
+wins <- c(72, 73)
+losses <- c(10, 9)
+is_champion <- c(TRUE, FALSE)
+season <- c("1995-96", "2015-16")
+great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
+# 利用 `$變數名稱`
+great_nba_teams$team_name 
+# 利用`[, "變數名稱"]`
+greate_nba_teams[,""]
+
+my_arr <- array(1:1000, dim = c(10, 10, 10))
+my_arr[5, 2, 4]
+
+title <- "Worst NBA Teams"
+teams <- c("Charlotte Bobcats", "Philadelphia 76ers")
+wins <- c(7, 9)
+losses <- c(59, 73)
+worst_nba_teams <- list(title, teams, wins, losses)
+worst_nba_teams[[3]]
+
+title <- "Worst NBA Teams"
+teams <- c("Charlotte Bobcats", "Philadelphia 76ers")
+wins <- c(7, 9)
+losses <- c(59, 73)
+worst_nba_teams <- list( 1 = title, 2 = teams, 3 = wins, 4 = losses)
+worst_nba_teams$[[2]]
+
+
+
+
+
+
+
+
+```
+
+
+
